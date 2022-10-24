@@ -13,6 +13,7 @@ class App extends React.Component {
     return (
       <div>
         <div id="game">
+          <div id="gradient"></div>
           <h1>Rock Paper Scissors!</h1>
           <h2>3</h2>
           <div id="hands">

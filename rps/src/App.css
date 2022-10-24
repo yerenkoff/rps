@@ -7,6 +7,9 @@
 
 body {
   background-color: #333;
+  background-image: url("../public/images/les.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #game {
@@ -14,15 +17,28 @@ body {
   width: 90%;
   max-width: 1000px;
   border-radius: 10px;
-  box-shadow: 0 0 50px #00000044;
+  box-shadow: 0 0 200px #000000;
   margin: auto;
   margin-top: 100px;
   font-family: 'Bangers', cursive;
   text-align: center;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
+#gradient{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(78,255,0,0.5858718487394958) 0%, rgba(255,255,255,0) 50%, rgba(255,45,45,0.5970763305322129) 100%);
+}
 h1 {
+  position: relative;
+  z-index: 2;
   background: rgb(255, 42, 114);
   background: linear-gradient(90deg, rgba(255, 42, 114, 1) 0%, rgba(170, 104, 255, 1) 50%, rgba(255, 129, 45, 1) 100%);
   background-clip: text;
@@ -54,15 +70,18 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
+  z-index: 2;
 }
 #hands{
-  background-color: gold;
+  position: relative;
+  z-index: 2;
+  /* background-color: gold; */
   overflow: hidden;
+  padding: 50px 0 0;
 }
 #hands img{
   display: block;
-  width: 40%;
+  width: 30%;
   float: left;
 }
 #hands img:last-child{
@@ -70,5 +89,28 @@ h2 {
 }
 
 #options{
-  background-color: lightblue;
+  transform: translateY(50%);
+  position: relative;
+  z-index: 2;
+
+  /* background-color: lightblue; */
+}
+#options img {
+  width: 100px;
+  height: 100px;
+  /* background-color: white; */
+  background: linear-gradient(90deg, rgba(255, 42, 114, 1) 0%, rgba(170, 104, 255, 0.5) 50%, rgba(255, 42, 114, 1) 100%);
+
+  border-radius: 100px;
+  margin: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  /* transform: rotate(45deg); */
+  border: 3px solid #ffffff00;
+  /* display: inline-block; */
+}
+#options img:hover{
+  /* transform: rotate(90deg); */
+  border: 3px solid #ffffff55;
+  box-shadow: 0 0px 50px rgb(255, 255, 255, 0.3);
 }
